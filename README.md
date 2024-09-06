@@ -34,14 +34,16 @@ To run the applications locally, you need to have `PHP`, `MySQL`, and `Apache` i
 - **Dockerfile:** is a text document that contains all the commands a user could call on the command line to assemble an image.
 - **docker-compose.yml:** is a YAML file that defines how Docker containers should behave in production.
 
-✅ To build the application created using Docker, you need to have Docker installed on your machine then:
+> ✅ To build the application created using Docker, you need to have Docker installed on your machine then:
 
 1. Clone the repository.
 2. Navigate to the application directory.
 3. Run the following command to build the application:
 
 ```bash
-docker-compose up --build
+docker-compose up
+# To remove the container after stopping it
+docker-compose down
 ```
 
 4. Open your browser and navigate to `http://localhost:8080` to view/add the database's table _(`PHPmyAdmin` Dashboard)_.
