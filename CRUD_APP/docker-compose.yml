@@ -1,0 +1,41 @@
+services:
+  # Database Layer for MySQL
+  mySQL_DB:
+    image: mysql
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: crud
+      MYSQL_USER: crud_user
+      MYSQL_PASSWORD: 1234
+    volumes:
+      - mysql_data:/var/lib/mysql
+
+  # Hospital System Layer (PHP)
+  # install RUN docker-php-ext-install pdo pdo_mysql
+  crud:
+    depends_on:
+      - mySQL_DB
+    container_name: crud
+    build:
+      context: .
+      dockerfile: Dockerfile
+    volumes:
+      - ./:/var/www/html
+    ports:
+      - "80:80"
+      - "443:443"
+
+  # PHPMyAdmin Layer
+  phpmyadmin:
+    image: phpmyadmin/phpmyadmin
+    restart: always
+    ports:
+      - "8080:80"
+    environment:
+      PMA_HOST: mySQL_DB
+      PMA_PORT: 3306
+      MYSQL_ROOT_PASSWORD: root
+
+volumes:
+  mysql_data: {}

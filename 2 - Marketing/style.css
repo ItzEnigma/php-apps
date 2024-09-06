@@ -1,0 +1,515 @@
+* {
+  margin: 0;
+  font-family: sans-serif;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  width: auto;
+}
+
+/* =========================
+    1. Header
+   ========================= */
+header {
+  display: flex;
+  justify-content: space-between;
+  background-color: #000000;
+  color: white;
+  position: sticky;
+  top: 0;
+  z-index: 4; /* To keep the header on top */
+}
+
+nav a {
+  color: white;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 22px;
+  padding: 12px 12px;
+}
+
+nav a:hover,
+.search_icon:hover {
+  background-color: #c4c4c4;
+  cursor: default;
+  color: black;
+}
+
+.search_icon {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.search_icon:hover {
+  background-color: #009688;
+}
+
+.parent-drop {
+  font-size: 20px;
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  width: 175px;
+  background: gray;
+  margin-left: 480px;
+  visibility: hidden;
+}
+
+.drop:hover + .parent-drop {
+  visibility: visible;
+}
+
+.parent-drop:hover {
+  visibility: visible;
+}
+
+.logo {
+  background: #009688;
+  font-size: 24px;
+}
+
+/* Home */
+.material-icons.md-1 {
+  position: relative;
+  top: 4px;
+}
+
+/* Menu */
+.material-icons.md-2 {
+  font-size: 20px;
+  position: relative;
+  top: 2px;
+}
+
+/* Search */
+.material-icons.md-3 {
+  color: white;
+  font-size: 40px;
+  padding: 6px;
+}
+
+/* Check */
+.material-icons.md-4 {
+  color: white;
+  font-size: 24px;
+  position: relative;
+  top: 4px;
+}
+
+/* Location */
+.material-symbols-outlined.md-5 {
+  color: #009688;
+  font-size: 32px;
+  position: relative;
+  top: 10px;
+  right: 4px;
+}
+
+/* Telephone */
+.material-symbols-outlined.md-6 {
+  color: #009688;
+  font-size: 32px;
+  position: relative;
+  top: 10px;
+  right: 4px;
+}
+
+/* Mail */
+.material-symbols-outlined.md-7 {
+  color: #009688;
+  font-size: 32px;
+  position: relative;
+  top: 10px;
+  right: 4px;
+}
+
+/* =========================
+    2. Main
+   ========================= */
+.main_image {
+  width: 100%;
+  height: 700px;
+}
+
+.image_text {
+  position: relative;
+  width: 180px;
+  background: rgb(0, 0, 0, 0.8);
+  text-align: center;
+  bottom: 60px;
+  left: 15px;
+  padding: 6px;
+  color: azure;
+  font-size: 28px;
+  border: 0 solid rgb(25, 24, 24);
+  border-radius: 8px;
+}
+
+.image_text:hover {
+  background-color: #009688;
+  cursor: default;
+}
+
+.team-section {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  padding: 10px;
+}
+
+.team-section h2 {
+  font-size: 28px;
+}
+
+.team-section p {
+  margin-top: 24px;
+}
+
+/* =========================
+    2.1. Team
+   ========================= */
+.team-members {
+  display: flex;
+  justify-content: space-around;
+  padding: 40px 20px;
+  margin-bottom: 120px;
+  text-align: center;
+}
+
+.avatar {
+  border-radius: 50%;
+  width: 128px;
+  height: 128px;
+}
+
+.team-members h3 {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+/* =========================
+    2.2. Work
+   ========================= */
+.work {
+  display: flex;
+  background: rgb(119, 119, 119);
+  background: linear-gradient(
+    135deg,
+    rgba(31, 31, 31, 1) 0%,
+    rgba(51, 51, 51, 1) 50%,
+    rgba(119, 119, 119, 1) 100%
+  );
+  margin-top: 40px;
+  padding: 80px 10px;
+}
+
+.work-text {
+  width: 25%;
+  color: white;
+}
+
+.work img {
+  width: 100%;
+  height: 250px;
+}
+
+.latest_projects {
+  display: flex;
+  justify-content: space-around;
+  width: 90%;
+}
+
+.project {
+  background: white;
+  height: 400px;
+  padding: 10px;
+  width: 30%;
+}
+
+.work-text h3 {
+  margin-bottom: 20px;
+  font-size: 28px;
+  color: #009688;
+}
+
+.work-text p {
+  line-height: 30px;
+}
+
+.latest_projects h4 {
+  text-align: center;
+  padding: 4px;
+}
+
+.latest_projects h5 {
+  font-size: 15px;
+  padding-bottom: 6px;
+}
+
+.latest_projects p {
+  font-size: 15px;
+}
+
+/* =========================
+    3. Pricing
+   ========================= */
+.pricing {
+  text-align: center;
+  margin-top: 10px;
+}
+
+.pricing-header {
+  font-size: 20px;
+  margin-bottom: 60px;
+}
+
+.pricing-header h2 {
+  font-size: 28px;
+  margin-bottom: 12px;
+}
+
+.price-bundles {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  padding: 30px;
+  padding-bottom: 50px;
+}
+
+.price-ticket {
+  width: 30%;
+}
+
+.price-ticket span {
+  font-size: 18px;
+  font-style: italic;
+}
+
+.price-ticket:hover {
+  box-shadow: 5px 5px 40px gray;
+}
+
+.price {
+  font-size: 26px;
+}
+
+.price-bundles h3 {
+  font-size: 28px;
+  background-color: #000;
+  padding: 32px 0;
+  color: white;
+}
+
+.price-bundles p {
+  border: 1px solid rgb(180, 180, 180, 0.3);
+  padding: 15px 0;
+}
+
+.signup {
+  text-decoration: none;
+  color: white;
+  background-color: #009688;
+  font-size: 20px;
+  display: inline-block;
+  padding: 10px 18px;
+  border-radius: 15px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+}
+
+.signup:hover {
+  background-color: rgb(111, 100, 100);
+}
+
+/* =========================
+    4. Contact Us
+   ========================= */
+.contact-us {
+  background-color: #f0f0f0 !important;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 16px;
+  padding-right: 24px;
+  margin-top: 80px;
+}
+
+.contact-us-info {
+  margin-top: 30px;
+}
+
+.contact-us-info h2 {
+  font-family: Verdana;
+  border-bottom: 6px solid #009688 !important;
+  display: inline-block;
+  font-size: 24px !important;
+  margin-bottom: 20px;
+}
+
+.contact-us-info h3 {
+  font-family: Verdana;
+  font-size: 20px !important;
+  font-weight: lighter;
+  margin-bottom: 20px;
+}
+
+.contact-us-detailed-info {
+  margin-top: 20px;
+}
+
+.contact-us-detailed-info p {
+  display: block;
+  padding: 4px;
+}
+
+.contact-us-box {
+  background-color: white;
+  box-shadow: 5px 5px 40px gray;
+  width: 60%;
+  padding: 34px 22px;
+}
+
+.contact-us-box label {
+  color: #009688;
+}
+
+.inp-section {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.inp {
+  width: 95%;
+  padding: 10px;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  font-size: 14px;
+}
+
+.inp-textarea {
+  resize: vertical;
+  max-height: 150px;
+}
+
+.chkbox {
+  width: 24px;
+  height: 24px;
+  position: relative;
+  top: 6px;
+}
+
+.form-submit {
+  color: #fff !important;
+  background-color: #009688 !important;
+  border: none;
+  border-radius: 8px;
+  float: right;
+  padding: 8px 16px;
+  vertical-align: middle;
+  overflow: hidden;
+  font-size: 18px;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* =========================
+    5. Footer
+   ========================= */
+
+.footer_image {
+  width: 100%;
+  height: auto;
+  filter: grayscale(50%);
+}
+
+.image_text_footer {
+  position: relative;
+  width: 180px;
+  background: rgb(0, 0, 0, 0.8);
+  text-align: center;
+  bottom: 775px;
+  left: 1040px;
+  padding: 6px;
+  color: azure;
+  font-size: 28px;
+  border: 0 solid rgb(25, 24, 24);
+  border-radius: 8px;
+  cursor: default;
+}
+.image_text_footer:hover {
+  box-shadow: 8px 8px 80px rgb(201, 201, 201);
+}
+
+footer {
+  background-color: #000000;
+  color: white;
+  text-align: center;
+  padding-bottom: 20px;
+}
+
+footer p {
+  padding: 10px;
+  font-size: 20px;
+}
+
+.footer_section {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+.footer_images {
+  width: 32px;
+  height: 32px;
+  border: none;
+  padding: 8px 16px;
+  vertical-align: middle;
+  margin-left: 8px;
+  color: #fff !important;
+  background-color: #009688;
+}
+
+.footer_images:hover {
+  background-color: rgb(111, 100, 100);
+}
+
+/* =========================
+    Navigation Links
+   ========================= */
+#Team {
+  padding-top: 60px;
+}
+
+#Work {
+  padding-top: 80px;
+}
+
+#Price {
+  padding-top: 80px;
+}
+
+#Contact {
+  padding-top: 10px;
+}
+
+/* =========================
+    Responsiveness
+   ========================= */
+
+@media (max-width: 600px) {
+  .work-text p {
+    line-height: 20px;
+    font-size: 12px;
+  }
+  .work-text {
+    width: 50%;
+  }
+
+  .latest_projects p {
+    font-size: 12px;
+  }
+}

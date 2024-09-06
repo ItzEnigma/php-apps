@@ -1,0 +1,12 @@
+services:
+  redis:
+    image: redis
+    ports:
+      - "6379:6379"
+
+  node_server:
+    depends_on:
+      - redis
+    build: .
+    ports:
+      - "8080:8080"
