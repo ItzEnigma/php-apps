@@ -40,7 +40,7 @@ CREATE TABLE `patients` (
 --
 
 INSERT INTO `patients` (`ID`, `Patient`, `Email`, `Reserve_Date`, `Creation_Date`) VALUES
-(1, 'Hosam', 'hosamhosam01@gmail.com', '0000-00-00', '2024-08-25 20:09:00'),
+(1, 'Hosam', 'hosammail@gmail.com', '0000-00-00', '2024-08-25 20:09:00'),
 (2, 'hosam', 'testemail@gmail.com', '2024-08-15', '2024-08-25 20:12:41'),
 (3, 'hosam', 'testemail@gmail.com', '2024-08-15', '2024-08-25 20:12:44'),
 (4, 'hosam2', 'testemail@gmail.com', '2024-08-15', '2024-08-25 20:14:38'),
